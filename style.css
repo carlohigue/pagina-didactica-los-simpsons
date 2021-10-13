@@ -1,4 +1,4 @@
-/*QUEREMOS UNA PAGINA QUE SE VEA ESTRUCTURADA MAS O MENOS A ASÍ:*/
+    /*QUEREMOS UNA PAGINA QUE SE VEA ESTRUCTURADA MAS O MENOS A ASÍ:*/
     /*================================================================================================*/
     /*|       [CABECERA DE LA IZQUIERDA]        [CABECERA DEL MEDIO]       [CABECERA DE LA DERECHA]  |*/
     /*================================================================================================*/
@@ -184,13 +184,14 @@ background-color: rgb(170, 255, 227);
     /*|   [  CONTACTO  ]   [    MAPA    ]   [  COPYRIGHT  ]   [  NOSOTROS  ]   [ REDES SOCIALES ]    |*/
     /*|   [  CONTACTO  ]   [    MAPA    ]   [  COPYRIGHT  ]   [  NOSOTROS  ]   [ REDES SOCIALES ]    |*/
     /*================================================================================================*/
-    
+
     /*VAMOS A ESCRIBIR LAS SIGUIETES LINEAS*/
     display: grid;
     grid-template-areas:
     "contacto mapa copyright nosotros redes-sociales";
     padding: 50px;
     background-color: aquamarine;
+    width: 100%;
 }
 
 .contacto{
@@ -314,5 +315,5 @@ background-color: rgb(170, 255, 227);
 
 iframe{
 /*ESTE ES EL IFRAME*/
-    width: 100%;
+    width: 180px;
 }
