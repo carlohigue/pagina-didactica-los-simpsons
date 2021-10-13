@@ -1,0 +1,318 @@
+/*QUEREMOS UNA PAGINA QUE SE VEA ESTRUCTURADA MAS O MENOS A ASÍ:*/
+    /*================================================================================================*/
+    /*|       [CABECERA DE LA IZQUIERDA]        [CABECERA DEL MEDIO]       [CABECERA DE LA DERECHA]  |*/
+    /*================================================================================================*/
+    /*  ============================================================================================  */
+    /*  |                            [ENCABEZADO][ENCABEZADO][ENCABEZADO]                          |  */
+    /*  |                                          [IMAGEN]                                        |  */
+    /*  |                                          [IMAGEN]                                        |  */
+    /*  |             [CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO]           |  */
+    /*  |             [CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO]           |  */
+    /*  |             [CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO]           |  */
+    /*  |             [CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO]           |  */
+    /*  |             [CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO]           |  */
+    /*  |             [CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO]           |  */
+    /*  ============================================================================================  */
+    /*================================================================================================*/
+    /*|   [  CONTACTO  ]   [    MAPA    ]   [  COPYRIGHT  ]   [  NOSOTROS  ]   [ REDES SOCIALES ]    |*/
+    /*|   [  CONTACTO  ]   [    MAPA    ]   [  COPYRIGHT  ]   [  NOSOTROS  ]   [ REDES SOCIALES ]    |*/
+    /*================================================================================================*/
+
+
+*{  /* EL * SELECCIONA TODOS LOS ELEMENTOS*/
+
+    margin: 0;  /*NOS DESHACEMOS DEL MARGEN INTERNO Y EXTERNO DE TODOS LAS ETIQUETAS*/
+    padding: 0; /*POSTERIORMENTE LO AÑADIREMOS SI NOS ES DE UTILIDAD*/
+}
+
+body{   
+/*PONGAMOS UN COLOR AL FONDO DE TODO*/
+
+background-color: rgb(170, 255, 227);
+
+}
+
+.encabezado{
+    display: grid;  /*RECUERDEN ¡SIEMPRE! QUE USEN GRID LLAMAR SU display RESPECTIVO ANTES QUE NADA*/
+
+/*ADVERTENCIA, MUCHO TEXTO CON FINES PEDAGÓGICOS*/
+    /*CON LA SIGUIENTE LINEA ES QUE LA MAGIA SUCEDE, SOLO TIENEN QUE ESCRIBIR LAS LINEAS POSTERIORES EN BASE A COMO QUIERES QUE SE VEA TU PÁGINA*/
+    /*QUEREMOS UN ENCABEZADO QUE SE VEA MAS O MENOS ASI:*/
+    /*================================================================================================*/
+    /*|       [CABECERA DE LA IZQUIERDA]        [CABECERA DEL MEDIO]       [CABECERA DE LA DERECHA]  |*/
+    /*================================================================================================*/
+    /*POR LOS QUE VAMOS A ESCRIBIR LO SIGUIENTE*/
+/*FIN DE LA ADVERTENCIA*/
+    grid-template-areas: 
+    "cabecera-izquierda cabecera-medio cabecera-derecha";
+
+    width: 100%;    
+    /*CON ESTA PONEMOS EL ANCHO DEL encabezado SEA IGUAL AL ANCHO DEL DISPLAY*/
+
+    height: 150px;
+    /*EL ALTO DEL ENCABEZADO*/
+
+    background-color: aquamarine;
+    /*ESTE ES EL COLOR DEL ENCABEZADO*/
+}
+
+.cabecera-izquierda{
+/*LLAMAMOS AL CUADRO QUE QUEREMOS UBICAR Y EDITAR A TRAVÉS DE SU SELECTOR*/
+    grid-area: cabecera-izquierda;
+    /*CON ESTO DELIMITAMOS EL ESPACIO QUE VA A OCUPAR EL CUADRO EN EL CSS GRID*/
+
+    /*AÑADIMOS ESTILO Y DECORACIÓN*/
+    margin: 25px;
+    padding: 25px;
+    background-color: rgb(101, 211, 174);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+
+
+}
+
+.cabecera-medio{
+    grid-area: cabecera-medio;
+    /*CON ESTO DELIMITAMOS EL ESPACIO QUE VA A OCUPAR EL CUADRO EN EL CSS GRID*/
+
+    /*AÑADIMOS ESTILO Y DECORACIÓN*/
+    margin: 25px;
+    padding: 25px;
+    background-color: rgb(101, 211, 174);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.cabecera-derecha{
+    grid-area: cabecera-derecha;
+    /*CON ESTO DELIMITAMOS EL ESPACIO QUE VA A OCUPAR EL CUADRO EN EL CSS GRID*/
+
+    /*AÑADIMOS ESTILO Y DECORACIÓN*/
+    margin: 25px;
+    padding: 25px;
+    background-color: rgb(101, 211, 174);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.contenido{
+/*ESTE SERÁ EL ESTILO PARA EL CONTENIDO DE NUESTRA PÁGINA*/
+
+/*ADVERTENCIA, CONTENIDO PEDAGOGICO SOBRE CSS GRID A CONTINUACION*/
+    /*COMO QUEREMOS QUE NUESTRO ARTÍCULO SE VEA MAS O MENOS ORDENADO ASÍ:*/
+    /*  ============================================================================================  */
+    /*  |                            [ENCABEZADO][ENCABEZADO][ENCABEZADO]                          |  */
+    /*  |                                          [IMAGEN]                                        |  */
+    /*  |                                          [IMAGEN]                                        |  */
+    /*  |             [CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO]           |  */
+    /*  |             [CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO]           |  */
+    /*  |             [CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO]           |  */
+    /*  |             [CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO]           |  */
+    /*  |             [CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO]           |  */
+    /*  |             [CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO][CONTENIDO]           |  */
+    /*  ============================================================================================  */
+    /*VAMOS A ESCRIBIR LAS SIGUIETES LINEAS*/
+    display: grid;
+    grid-template-areas: 
+    "encabezado-del-articulo"
+    "imagen-del-articulo"
+    "contenido-del-articulo";
+    /*Y CAMBIAREMOS EL TAMAÑO DE CADA UNA DE LAS SECCIONES A CONVENIENCIA*/
+/*FIN DE LA ADVERTENCIA*/
+
+    width: 1000px;
+    /*ASUMIMOS QUE LA PANTALLA QUE VERÁ ESTA PAGINA SERÁ DE PC, O SEA DE AL MENOS 1024px, POR LO QUE 800px ESTARÍA BIEN*/
+
+    /*AÑADIMOS ESTILO Y DECORACIÓN*/
+    background-color: rgb(117, 231, 193);
+    margin: 50px;
+    padding: 50px;
+    position: relative;
+    left: 75px;    
+}
+
+.encabezado-del-articulo{
+    grid-area: encabezado-del-articulo;
+    /*CON ESTO LO UBICAMOS EN EL CSS GRID*/
+
+    /*AÑADIMOS ESTILO Y DECORACIÓN*/
+    background-color:  rgb(105, 207, 173);
+    margin: 20px;
+    padding: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.imagen-del-articulo{
+    grid-area: imagen-del-articulo;
+    /*CON ESTO LO UBICAMOS EN EL CSS GRID*/
+
+    /*AÑADIMOS ESTILO Y DECORACIÓN*/
+    background-color:  rgb(105, 207, 173);
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    position: relative;
+    left: 60px;
+}
+
+.contenido-del-articulo{
+    grid-area: contenido-del-articulo;
+    /*CON ESTO LO UBICAMOS EN EL CSS GRID*/
+
+    /*AÑADIMOS ESTILO Y DECORACIÓN*/
+    background-color:  rgb(105, 207, 173);
+    margin: 20px;
+    padding: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.pie-de-pagina{
+/*ESTE SERÁ EL ESTILO PARA EL CONTENIDO DE NUESTRO PIE DE PÁGINA*/
+
+/*ADVERTENCIA, CONTENIDO PEDAGOGICO SOBRE CSS GRID A CONTINUACION*/
+    /*COMO QUEREMOS QUE NUESTRO PIE DE PAGINA SE VEA MAS O MENOS ORDENADO ASÍ:*/
+    /*================================================================================================*/
+    /*|   [  CONTACTO  ]   [    MAPA    ]   [  COPYRIGHT  ]   [  NOSOTROS  ]   [ REDES SOCIALES ]    |*/
+    /*|   [  CONTACTO  ]   [    MAPA    ]   [  COPYRIGHT  ]   [  NOSOTROS  ]   [ REDES SOCIALES ]    |*/
+    /*================================================================================================*/
+    
+    /*VAMOS A ESCRIBIR LAS SIGUIETES LINEAS*/
+    display: grid;
+    grid-template-areas:
+    "contacto mapa copyright nosotros redes-sociales";
+    padding: 50px;
+    background-color: aquamarine;
+}
+
+.contacto{
+/*ESTA SERA EL AREA DE CONTACTO DEL FOOTER*/
+    grid-area: contacto;
+    /*CON ESTO LO UBICAMOS EN EL GRID*/
+
+    width: 200px;
+    /*HAREMOS QUE CADA UNO DE LOS RECUADROS MIDAN LOS MISMO*/
+}
+
+.contacto-titular{
+/*ESTE ES EL TITULO DENTRO DEL CUADRO DE contacto*/
+
+    /*ESTILO Y DECORACION*/
+    font-family: monospace;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contacto-contenido{
+/*ESTE ES EL CONTENIDO DENTRO DEL CUADRO DE contacto*/
+
+    /*ESTILO Y DECORACION*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+
+.mapa{
+/*ESTE ES EL CUADRO PARA EL MAPA*/
+    grid-area: mapa;
+    /*CON ESTO LO UBICAMOS EN EL GRID*/
+    
+    width: 200px;
+    /*HAREMOS QUE CADA UNO DE LOS RECUADROS MIDAN LOS MISMO*/
+}
+
+.mapa-titular{
+/*ESTE ES EL TITULO DENTRO DEL CUADRO DE contacto*/
+
+    /*ESTILO Y DECORACION*/
+    font-family: monospace;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.copyright{
+/*ESTE ES EL CUADRO PARA copyright*/
+
+    grid-area: copyright;
+    /*CON ESTO LO UBICAMOS EN EL GRID*/
+
+    width: 200px;
+    /*HAREMOS QUE CADA UNO DE LOS RECUADROS MIDAN LOS MISMO*/
+
+    /*ESTILO Y DECORACION*/
+    font-family: monospace;
+    font-size: 25px;
+    align-self: center;
+}
+
+.nosotros{
+/*ESTE ES EL CUADRO PARA nosotros*/
+    grid-area: nosotros;
+    /*CON ESTO LO UBICAMOS EN EL GRID*/
+
+    width: 200px;
+    /*HAREMOS QUE CADA UNO DE LOS RECUADROS MIDAN LOS MISMO*/
+}
+
+.nosotros-titular{
+/*ESTE ES EL TITULO DENTRO DEL CUADRO DE nosotros*/
+
+    /*ESTILO Y DECORACION*/
+    font-family: monospace;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+
+.nosotros-contenido{
+/*ESTE ES EL CONTENIDO DENTRO DEL CUADRO DE nosostros*/
+
+    /*ESTILO Y DECORACION*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.redes-sociales{
+/*ESTE ES EL CUADRO PARA nosotros*/
+
+    grid-area: redes-sociales;
+    /*CON ESTO LO UBICAMOS EN EL GRID*/
+
+    width: 200px;
+    /*HAREMOS QUE CADA UNO DE LOS RECUADROS MIDAN LOS MISMO*/
+}
+
+.redes-sociales-titular{
+/*ESTE ES EL TITULO DENTRO DEL CUADRO DE redes-sociales*/
+
+    /*ESTILO Y DECORACION*/
+    font-family: monospace;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.redes-sociales-link{
+/*ESTE ES EL SELECTOR QUE USAREMOS PARA REFERIRNOS AL <a> QUE PERRMITIRÁ QUE NUESTROS ÍCONOS DE REDES SOCIALES SE VUELVAN LINKS*/
+    text-decoration: none;
+    /*CON ESTO NOS DESHACEMOS DEL SUBRAYADO Y ESTILO NATURAL DE LOS LINKS*/
+}
+
+.svg-inline--fa{
+/*ESTE SELECTOR YA LO POSEÍAN LOS svg QUE TOMAMOS DE fontawesome.com, LO USAMOS PARA DARLE ESTILO A CADA UNO*/
+    width: 40px;
+    color: black;
+}
+
+iframe{
+/*ESTE ES EL IFRAME*/
+    width: 100%;
+}
